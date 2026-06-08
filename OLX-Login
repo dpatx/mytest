@@ -1,11 +1,9 @@
 spring:
-  application:
-    name: OLX-Login
   datasource:
-      url: jdbc:mysql://localhost:3306/olx-users
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      username: root
-      password: root
+    url: jdbc:mysql://localhost:3306/olx-users
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
   jpa:
       hibernate.ddl-auto: update
       properties:
