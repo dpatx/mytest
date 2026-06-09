@@ -9,27 +9,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-
-# Add these lines to your Git config file:
-resilience4j:
-  circuitbreaker:
-    instances:
-      TOKEN-VALIDATION:
-        registerHealthIndicator: true
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        failureRateThreshold: 50
-        minimumNumberOfCalls: 5
-        permittedNumberOfCallsInHalfOpenState: 3
-        waitDurationInOpenState: 5s
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  health:
-    circuitbreakers:
-      enabled: true
-  endpoint:
-    health:
-      show-details: always
